@@ -4,11 +4,9 @@ public class ArrayRataNilai22 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         
-        // Minta user masukin jumlah elemen
         System.out.print("Masukkan jumlah mahasiswa: ");
         int jumlahMhs = input.nextInt();
         
-        // Ukuran array ngikutin variabel jumlahMhs
         int[] nilaiMhs = new int[jumlahMhs];
         int total = 0;
         double rata2;
@@ -37,7 +35,6 @@ public class ArrayRataNilai22 {
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
         
-        // Loop diubah mulai dari i = 0 biar mahasiswa ke-1 juga ke-print predikatnya
         for (int i = 0; i < nilaiMhs.length; i++) {
             if (nilaiMhs[i] >= 85) {
                 predikat = "SANGAT BAIK";
