@@ -1,10 +1,9 @@
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class ArrayNilai22 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int[] nilaiAkhir = new int[10]; 
+        int[] nilaiAkhir = new int[10];
 
         for (int i = 0; i < nilaiAkhir.length; i++) {
             System.out.print("Masukkan nilai akhir mahasiswa ke-" + (i + 1) + ": ");
@@ -13,7 +12,19 @@ public class ArrayNilai22 {
 
         for (int i = 0; i < nilaiAkhir.length; i++) {
             String status = (nilaiAkhir[i] > 70) ? "LULUS" : "TIDAK LULUS";
-            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] + " (" + status + ")");
+            System.out.println("Mahasiswa ke-" + (i + 1) + ": " + nilaiAkhir[i] +
+                    " (" + status + ")");
         }
+
+        int lulus = 0, tidakLulus = 0;
+        for (int i = 0; i < nilaiAkhir.length; i++) {
+            if (nilaiAkhir[i] > 70) {
+                lulus++;
+            } else {
+                tidakLulus++;
+            }
+        }
+        System.out.println("Jumlah mahasiswa lulus: " + lulus);
+        System.out.println("Jumlah mahasiswa tidak lulus: " + tidakLulus);
     }
 }
