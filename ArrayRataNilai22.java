@@ -7,13 +7,11 @@ public class ArrayRataNilai22 {
         int total = 0;
         double rata2;
         String predikat;
-
         for (int i = 0; i < nilaiMhs.length; i++) {
             System.out.print("Masukkan nilai mahasiswa ke-" + (i + 1) + ": ");
             nilaiMhs[i] = input.nextInt();
             total += nilaiMhs[i];
         }
-
         rata2 = (double) total / nilaiMhs.length;
         System.out.println("Total nilai: " + total);
         System.out.println("Rata-rata: " + rata2);
@@ -28,10 +26,8 @@ public class ArrayRataNilai22 {
                 terendah = nilaiMhs[i];
             }
         }
-
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
-
         for (int i = 1; i < nilaiMhs.length; i++) {
             if (nilaiMhs[i] >= 85) {
                 predikat = "SANGAT BAIK";
@@ -42,6 +38,14 @@ public class ArrayRataNilai22 {
             }
             System.out.println("Nilai mahasiswa: " + nilaiMhs[i] + " = " + predikat);
         }
+
+        int mahasiswaLulus = 0;
+        for (int i = 0; i < nilaiMhs.length; i++) {
+            if (nilaiMhs[i] > 70) {
+                mahasiswaLulus++;
+            }
+        }
+        System.out.println("Banyaknya mahasiswa yang lulus: " + mahasiswaLulus);
 
     }
 }
