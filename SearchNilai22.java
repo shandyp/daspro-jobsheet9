@@ -1,22 +1,13 @@
-import java.util.Scanner;
-
 public class SearchNilai22 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
-        System.out.print("Masukkan banyaknya elemen array: ");
-        int n = input.nextInt();
-        int[] nilai = new int[n];
-
-        for (int i = 0; i < nilai.length; i++) {
-            System.out.print("Masukkan elemen ke-" + i + ": ");
-            nilai[i] = input.nextInt();
-        }
-
-        System.out.print("Masukkan nilai (key) yang ingin dicari: ");
-        int key = input.nextInt();
+        // Array bawaan dari modul
+        int[] nilai = {78, 65, 90, 55, 88, 72};
+        
+        // Sengaja dicari angka yang nggak ada di array biar pesannya dieksekusi
+        int key = 100; 
         boolean ditemukan = false;
-
+        
+        // Proses pencarian (Linear Search)
         for (int i = 0; i < nilai.length; i++) {
             if (nilai[i] == key) {
                 System.out.println("Nilai " + key + " ditemukan pada indeks ke-" + i);
@@ -24,11 +15,10 @@ public class SearchNilai22 {
                 break;
             }
         }
-
+        
+        // Ini bagian modifikasi pesannya biar lebih informatif
         if (!ditemukan) {
-            System.out.println("Nilai " + key + " tidak ditemukan.");
+            System.out.println("Maaf, nilai " + key + " yang Anda cari tidak ditemukan dalam daftar array.");
         }
-
-        input.close();
     }
 }
